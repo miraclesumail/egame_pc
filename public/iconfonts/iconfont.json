@@ -1,0 +1,100 @@
+{
+  "id": "3617349",
+  "name": "react-game-pc",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "31560830",
+      "name": "checkBox 2",
+      "font_class": "a-checkBox2",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "31560851",
+      "name": "alert-circle-rect",
+      "font_class": "alert-circle-rect",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "31553875",
+      "name": "alert-circle",
+      "font_class": "alert-circle",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "31553878",
+      "name": "circle-check",
+      "font_class": "circle-check",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "31548243",
+      "name": "logout",
+      "font_class": "logout",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "31548146",
+      "name": "edit-name",
+      "font_class": "edit-name",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "31545837",
+      "name": "key",
+      "font_class": "key",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "31545851",
+      "name": "sound",
+      "font_class": "sound",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "31542427",
+      "name": "language",
+      "font_class": "language",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "31542430",
+      "name": "support-agent",
+      "font_class": "support-agent",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "29524566",
+      "name": "record-circle-line",
+      "font_class": "record-circle-line",
+      "unicode": "e840",
+      "unicode_decimal": 59456
+    },
+    {
+      "icon_id": "31537517",
+      "name": "poker_style",
+      "font_class": "poker_style",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "31537518",
+      "name": "tips",
+      "font_class": "tips",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "react-i18n.i18nPaths": "src/i18n",
+  "commentTranslate.multiLineMerge": true
+}

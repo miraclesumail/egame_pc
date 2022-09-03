@@ -1,0 +1,42 @@
+export const keyframes: any = {
+  banker: [
+    [{ transform: "translate(0)" }, { transform: "translate(345px, -102px) scale(0.625)" }],
+    [{ transform: "translate(0)" }, { transform: "translate(256px, -102px) scale(0.625)" }],
+    [{ transform: "translate(0)" }, { transform: "translate(167px, -102px) scale(0.625)" }],
+    [{ transform: "translate(0)" }, { transform: "translate(78px, -102px) scale(0.625)" }],
+    [{ transform: "translate(0)" }, { transform: "translate(-11px, -102px) scale(0.625)" }],
+    [{ transform: "translate(0)" }, { transform: "translate(-100px, -102px) scale(0.625)" }],
+  ],
+  player: [
+    [{ transform: "translate(0)" }, { transform: "translate(43px, -102px) scale(0.625)" }],
+    [{ transform: "translate(0)" }, { transform: "translate(-46px, -102px) scale(0.625)" }],
+    [{ transform: "translate(0)" }, { transform: "translate(-135px, -102px) scale(0.625)" }],
+    [{ transform: "translate(0)" }, { transform: "translate(-224px, -102px) scale(0.625)" }],
+    [{ transform: "translate(0)" }, { transform: "translate(-313px, -102px) scale(0.625)" }],
+    [{ transform: "translate(0)" }, { transform: "translate(-402px, -102px) scale(0.625)" }],
+  ],
+  tie: [
+    [{ transform: "translate(0)" }, { transform: "translate(222px, -295px) scale(0.625)" }],
+    [{ transform: "translate(0)" }, { transform: "translate(133px, -295px) scale(0.625)" }],
+    [{ transform: "translate(0)" }, { transform: "translate(44px, -295px) scale(0.625)" }],
+    [{ transform: "translate(0)" }, { transform: "translate(-45px, -295px) scale(0.625)" }],
+    [{ transform: "translate(0)" }, { transform: "translate(-134px, -295px) scale(0.625)" }],
+    [{ transform: "translate(0)" }, { transform: "translate(-223px, -295px) scale(0.625)" }],
+  ],
+  playerDouble: [
+    [{ transform: "translate(0)" }, { transform: "translate(22px, -295px) scale(0.625)" }],
+    [{ transform: "translate(0)" }, { transform: "translate(-66px, -295px) scale(0.625)" }],
+    [{ transform: "translate(0)" }, { transform: "translate(-154px, -295px) scale(0.625)" }],
+    [{ transform: "translate(0)" }, { transform: "translate(-242px, -295px) scale(0.625)" }],
+    [{ transform: "translate(0)" }, { transform: "translate(-330px, -295px) scale(0.625)" }],
+    [{ transform: "translate(0)" }, { transform: "translate(-418px, -295px) scale(0.625)" }],
+  ],
+  bankerDouble: [
+    [{ transform: "translate(0)" }, { transform: "translate(423px,  -295px) scale(0.625)" }],
+    [{ transform: "translate(0)" }, { transform: "translate(334px, -295px) scale(0.625)" }],
+    [{ transform: "translate(0)" }, { transform: "translate(245px, -295px) scale(0.625)" }],
+    [{ transform: "translate(0)" }, { transform: "translate(156px, -295px) scale(0.625)" }],
+    [{ transform: "translate(0)" }, { transform: "translate(67px, -295px) scale(0.625)" }],
+    [{ transform: "translate(0)" }, { transform: "translate(-22px, -295px) scale(0.625)" }],
+  ],
+};

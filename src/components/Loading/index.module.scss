@@ -1,0 +1,51 @@
+@use "sass:math";
+@import "src/assets/scss/variables";
+
+.mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $loading-z-index;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  touch-action: none;
+  background: rgba(0, 0, 0, 0.5);
+
+  --animate-duration: 200ms;
+}
+
+.loading {
+  width: 44px;
+  height: 44px;
+  border: 2px solid #b9975e;
+  border-top-color: transparent;
+  border-radius: 100%;
+  animation: circle infinite 0.75s linear;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes line-scale {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+  }
+
+  20% {
+    transform: scaleY(1);
+  }
+}

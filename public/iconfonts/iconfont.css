@@ -1,0 +1,67 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3617349 */
+  src: url('iconfont.woff2?t=1661860738800') format('woff2'),
+       url('iconfont.woff?t=1661860738800') format('woff'),
+       url('iconfont.ttf?t=1661860738800') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-a-checkBox2:before {
+  content: "\e616";
+}
+
+.icon-alert-circle-rect:before {
+  content: "\e617";
+}
+
+.icon-alert-circle:before {
+  content: "\e612";
+}
+
+.icon-circle-check:before {
+  content: "\e613";
+}
+
+.icon-logout:before {
+  content: "\e611";
+}
+
+.icon-edit-name:before {
+  content: "\e610";
+}
+
+.icon-key:before {
+  content: "\e60a";
+}
+
+.icon-sound:before {
+  content: "\e60c";
+}
+
+.icon-language:before {
+  content: "\e608";
+}
+
+.icon-support-agent:before {
+  content: "\e60b";
+}
+
+.icon-record-circle-line:before {
+  content: "\e840";
+}
+
+.icon-poker_style:before {
+  content: "\e602";
+}
+
+.icon-tips:before {
+  content: "\e603";
+}
+

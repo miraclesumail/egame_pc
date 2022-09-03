@@ -1,0 +1,136 @@
+@use "sass:math";
+$border-color-button: #d3af6e !default;
+
+@mixin border(
+  $color: $border-color-button,
+  $radius: $border-radius-base,
+  $usePosition: true
+) {
+  border-radius: $radius;
+
+  @if $usePosition {
+    position: relative;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    content: "\20";
+    border: 1px solid $color;
+    border-radius: if(math.unit($radius) == px, $radius * 2, $radius);
+    transform: scale(0.5, 0.5);
+    transform-origin: top left;
+  }
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16px;
+  width: 140px;
+  height: 48px;
+  border-radius: 100px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  &:active {
+    opacity: 0.9;
+  }
+
+  &.hollow {
+    color: #d3af6e;
+
+    @include border($border-color-button, 100px);
+  }
+
+  &.solid {
+    color: #fff;
+    background: linear-gradient(
+      74.31deg,
+      #6c5635 0%,
+      #e0b975 100%,
+      #b99454 100%
+    );
+  }
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  margin: 0 auto;
+  background: rgba(101, 90, 70, 0.7);
+
+  &.small {
+    position: absolute;
+  }
+
+  --animate-duration: 200ms;
+}
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  max-height: 94%;
+  background: #171717;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.16),
+    0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09);
+}
+
+.header {
+  position: relative;
+  flex: 0 0 auto;
+  height: 80px;
+  font-size: 18px;
+  line-height: 90px;
+  color: #e5c180;
+  text-align: center;
+
+  &__close {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    width: 24px;
+    height: 24px;
+    background: url("./icon_close.png") no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+  }
+}
+
+.content {
+  flex: 1 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.message {
+  padding-top: 34px;
+  padding-bottom: 54px;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px 10px 25px;
+}
