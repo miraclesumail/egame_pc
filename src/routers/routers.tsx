@@ -14,8 +14,9 @@ const AuthLazy = React.lazy(() => import("@/views/Auth"));
 const Bet = React.lazy(() => import("@/views/Bet"));
 const TablePick = React.lazy(() => import("@/views/TablePick"));
 const Classic = React.lazy(() => import("@/views/Classic"));
-const Demo = React.lazy(() => import("@/views/Demo"))
+const Demo = React.lazy(() => import("@/views/Demo"));
 const MultiBet = React.lazy(() => import("@/views/MultiBet"));
+const Test = React.lazy(() => import("@/views/test"));
 
 const routes: RouteObject[] = [
   {
@@ -25,9 +26,7 @@ const routes: RouteObject[] = [
       {
         index: true,
         path: "/",
-        element: (
-          <HomeLazy />
-        ),
+        element: <HomeLazy />,
       },
     ],
   },
@@ -40,6 +39,20 @@ const routes: RouteObject[] = [
         element: (
           <LazyRoute>
             <Bet />
+          </LazyRoute>
+        ),
+      },
+    ],
+  },
+  {
+    path: "/test",
+    element: <Layout2 />,
+    children: [
+      {
+        index: true,
+        element: (
+          <LazyRoute>
+            <Test />
           </LazyRoute>
         ),
       },
@@ -80,12 +93,12 @@ const routes: RouteObject[] = [
     ],
   },
   {
-      path: "/auth",
-      element: <AuthLazy />
+    path: "/auth",
+    element: <AuthLazy />,
   },
   {
-    path: '/demo',
-    element: <Demo />
-  }
+    path: "/demo",
+    element: <Demo />,
+  },
 ];
 export default routes;

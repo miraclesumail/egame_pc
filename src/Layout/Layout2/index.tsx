@@ -21,7 +21,7 @@ const Layout2 = (props: Props) => {
   return (
     <Column>
       {/* <TitleView className="title">{title}</TitleView> */}
-      {/* <Header/> */}
+      <Header/>
       <Outlet context={[routeProps, setRouteProps]} />
     </Column>
   )
