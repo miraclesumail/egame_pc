@@ -133,15 +133,8 @@ function cockroachWay(n, r) {
     e = bigWayInfiniteRow(n);
   return n[4] || n[3] ? (n[3] ? (t = [3, 1]) : n[4] && (t = [4, 0]), turnRightColumn(threeWayColumn(e, t, 2), r)) : [];
 }
-(exports.__esModule = !0),
-  (exports.cockroachWay = exports.smallWay = exports.bigEyeWay = exports.bigWay = exports.dishWay = void 0),
-  (exports.dishWay = dishWay),
-  (exports.bigWay = bigWay),
-  (exports.bigEyeWay = bigEyeWay),
-  (exports.smallWay = smallWay),
-  (exports.cockroachWay = cockroachWay);
 
-function drawGrid(ctx, o) {
+export function drawGrid(ctx, o) {
   const { rows, columns, lineColor, origin, lineWidth, cellWidth, cellHeight } = o;
   const verticalHeight = rows * cellHeight + lineWidth;
   const horizonWidth = columns * cellWidth + lineWidth;
@@ -151,9 +144,9 @@ function drawGrid(ctx, o) {
     ctx.beginPath();
     ctx.lineWidth = lineWidth;
     ctx.strokeStyle = lineColor;
-    i.moveTo(w, Math.floor(origin[1]));
-    i.lineTo(w, Math.floor(verticalHeight + origin[1]));
-    i.stroke();
+    ctx.moveTo(w, Math.floor(origin[1]));
+    ctx.lineTo(w, Math.floor(verticalHeight + origin[1]));
+    ctx.stroke();
   }
 
   for (let f = 0; f <= rows; f++) {
@@ -161,13 +154,13 @@ function drawGrid(ctx, o) {
     ctx.beginPath();
     ctx.lineWidth = lineWidth;
     ctx.strokeStyle = lineColor;
-    i.moveTo(origin[0], h);
-    i.lineTo(origin[0] + horizonWidth, h);
-    i.stroke();
+    ctx.moveTo(origin[0], h);
+    ctx.lineTo(origin[0] + horizonWidth, h);
+    ctx.stroke();
   }
 }
 
-function drawText(i, o) {
+export function drawText(i, o) {
   var r = o.x,
     l = o.y,
     a = o.text,
@@ -186,7 +179,7 @@ function drawText(i, o) {
     i.stroke();
 }
 
-function drawSolidCircle(i, o) {
+export function drawSolidCircle(i, o) {
   var r = o.x,
     l = o.y,
     a = o.color,
