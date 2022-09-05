@@ -123,21 +123,21 @@ export const roundData = {
       banker_val: '8',
       player_val: '8',
       card_num: '4',
-      pair: '0',
+      pair: '1',
       timestamp: 1659259397365
     },
     GD051227310K011: {
       banker_val: '8',
       player_val: '8',
       card_num: '4',
-      pair: '0',
+      pair: '2',
       timestamp: 1659259397365
     },
     GD051227310K012: {
       banker_val: '8',
       player_val: '8',
       card_num: '4',
-      pair: '0',
+      pair: '4',
       timestamp: 1659259397365
     },
     GD051227310L5: {

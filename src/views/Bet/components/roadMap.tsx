@@ -7,6 +7,7 @@ import {
   drawBigEyeWay,
   drawSmallWay,
   drawCockroachWay,
+  dishWay
 } from "@/utils/dewdrop";
 import styled from "styled-components";
 import { Row, Column } from "@/components/flex";
@@ -99,7 +100,6 @@ function init(initList: InitData[]) {
     gridLineColor: "rgba(211, 175, 110, 0.3)",
     cellWidth: 10,
     cellHeight: 10,
-    skipOddLine: true,
     textMap,
     colorMap,
   };
@@ -110,7 +110,6 @@ function init(initList: InitData[]) {
     gridLineColor: "rgba(211, 175, 110, 0.3)",
     cellWidth: 10,
     cellHeight: 10,
-    skipOddLine: true,
     textMap,
     colorMap,
   };
@@ -121,7 +120,6 @@ function init(initList: InitData[]) {
     gridLineColor: "rgba(211, 175, 110, 0.3)",
     cellWidth: 10,
     cellHeight: 10,
-    skipOddLine: true,
     textMap,
     colorMap,
   };
@@ -157,6 +155,8 @@ const RoadMap: FC<Props> = ({ dataSource }) => {
   const initList = formatResultList(dataSource);
 
   useEffect(() => {
+    console.log(initList, 'initListinitListinitList');
+    console.log(dishWay(initList));
     init(initList);
   }, []);
 
