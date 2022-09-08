@@ -3,6 +3,8 @@ import bgtable from "@/assets/images/test/tableBg.png";
 import decoration from "@/assets/images/test/decoration.png";
 import styled from "styled-components";
 import Card from "./components/card";
+import MIDI from "midi.js";
+
 import Zoom from "@/components/zoom";
 import Cover from "./components/cover";
 import { formatResultList, initCanvas } from "@/utils/tool";
@@ -30,9 +32,47 @@ const data = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 const Index = () => {
   const ref = useRef<HTMLCanvasElement>();
 
+  function playMidi(url) {
+    MIDI.Player.removeListener(); // removes current listener.
+    let noneTriggered = true;
+
+    MIDI.Player.addListener((data) => {
+      const now = data.now; // where we are now
+      const end = data.end; //
+
+      console.log(now, end, "dsksss0000");
+
+      if (end - now <= 1000 && noneTriggered) {
+        noneTriggered = false;
+
+        setTimeout(() => {
+          MIDI.Player.stop();
+          playMidi(url);
+        }, 1000);
+      }
+    });
+    // "/bg.mp3.mid"
+    MIDI.Player.loadFile(url, () => {
+      MIDI.Player.start();
+    });
+  }
   //   const { rows, columns, lineColor, origin, lineWidth, cellWidth, cellHeight } = o;
 
   useEffect(() => {
+    const audioCtx = new AudioContext();
+    // audioCtx.resume().then(() => {
+    //   playMidi("/bg.mp3.mid");
+    // });
+
+    setTimeout(() => {
+      playMidi("/bg.mp3.mid");
+    }, 5000);
+
+    // MIDI.WebAudio.getContext()
+    //   .resume()
+    //   .then(() => {
+    //     playMidi("/bg.mp3.mid");
+    //   });
     // const ctx = initCanvas(ref.current, false, 800, 600);
     // const ctx = ref.current.getContext("2d");
 
@@ -68,6 +108,7 @@ const Index = () => {
           tie: 18,
           playerDouble: 20,
         }}
+        onClick={() => console.log("www")}
       />
       {/* <canvas width={800} height={600} ref={ref}></canvas> */}
     </Container>
